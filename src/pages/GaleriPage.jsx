@@ -126,7 +126,7 @@ export default function GaleriPage() {
               </div>
               <h1 className="text-3xl sm:text-5xl lg:text-7xl font-extrabold tracking-tight text-[#143826] uppercase leading-[1.05] font-headline">
                 Real Work.<br />
-                <span className="italic font-display font-light text-[#55695E]">Real Transformation.</span>
+                <span className="italic font-display font-light text-[#55695E]">Transformation.</span>
               </h1>
             </div>
             <div className="max-w-md md:text-right">
@@ -755,7 +755,7 @@ export default function GaleriPage() {
               onClick={() => onOpenConsultation({ title: 'Konsultasi Arsip Portfolio Galeri' })}
               className="inline-flex items-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 rounded-full bg-white hover:bg-[#EEF5EF] text-[#143826] font-bold text-xs uppercase tracking-widest border border-[#DCE6DD] shadow-sm hover:shadow transition-all font-label"
             >
-              <span>Buka 42+ Arsip Dokumentasi Foto Lainnya via WhatsApp</span>
+              <span>Buka 42+ Arsip Dokumentasi Foto Lainnya</span>
               <span className="material-symbols-outlined text-sm">arrow_forward</span>
             </button>
           </div>
