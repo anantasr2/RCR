@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+  }
+}
+
+/* Custom Atelier Craft Dividers & Styling */
+.craft-divider {
+  background-image: radial-gradient(circle, #CBD5CE 1px, transparent 1px);
+  background-size: 8px 1px;
+  background-repeat: repeat-x;
+  height: 1px;
+}
+
+.tag-leather {
+  border: 1px solid #D1DDD4;
+  background: #F4F8F5;
+}
+
+/* Hide scrollbar for clean tab scrolling */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
