@@ -19,7 +19,7 @@ export default function Navbar({ onOpenBookModal, onOpenTrackModal }) {
           
           {/* Brand Crest / Logo */}
           <Link to="/" className="flex items-center gap-3 group">
-            <div className="h-12 w-12 rounded-lg bg-white p-1 border border-[#D8E5DC] shadow-sm flex items-center justify-center overflow-hidden shrink-0 group-hover:shadow-md transition-shadow">
+            <div className="h-11 w-11 sm:h-12 sm:w-12 rounded-lg bg-white p-1 border border-[#D8E5DC] shadow-sm flex items-center justify-center overflow-hidden shrink-0 group-hover:shadow-md transition-shadow">
               <img 
                 src={logoUrl} 
                 alt="RCR Indonesia Official Logo" 
@@ -27,16 +27,16 @@ export default function Navbar({ onOpenBookModal, onOpenTrackModal }) {
               />
             </div>
             <div className="flex flex-col text-left">
-              <span className="font-headline text-2xl tracking-wider uppercase font-bold text-[#143826] leading-none transition-colors">
+              <span className="font-headline text-xl sm:text-2xl tracking-wider uppercase font-bold text-[#143826] leading-none transition-colors">
                 RCR INDONESIA
               </span>
-              <span className="font-label text-[10px] text-[#526B5C] tracking-widest font-bold uppercase mt-1">
+              <span className="font-label text-[9px] sm:text-[10px] text-[#526B5C] tracking-widest font-bold uppercase mt-1">
                 ATELIER REPAIR • CLEANING • RESTORE
               </span>
             </div>
           </Link>
 
-          {/* Desktop Nav Links */}
+          {/* Desktop Nav Links (LOCATIONS REMOVED as requested) */}
           <nav className="hidden lg:flex items-center gap-7 font-label text-xs uppercase tracking-wider font-semibold">
             <Link 
               to="/" 
@@ -72,13 +72,6 @@ export default function Navbar({ onOpenBookModal, onOpenTrackModal }) {
               GALERI TRANSFORMASI
             </Link>
 
-            <a 
-              href="/#outlets" 
-              className="text-[#526B5C] hover:text-[#143826] transition-colors"
-            >
-              LOCATIONS
-            </a>
-
             <button 
               type="button"
               onClick={onOpenTrackModal} 
@@ -92,7 +85,7 @@ export default function Navbar({ onOpenBookModal, onOpenTrackModal }) {
           <div className="flex items-center gap-3">
             <button 
               onClick={onOpenBookModal}
-              className="px-5 py-2.5 rounded-lg bg-[#C2101C] hover:bg-[#A80B15] text-white font-label text-xs uppercase font-bold tracking-wider shadow-sm hover:shadow-md transition-all flex items-center gap-2 cursor-pointer"
+              className="px-4 sm:px-5 py-2 sm:py-2.5 rounded-lg bg-[#C2101C] hover:bg-[#A80B15] text-white font-label text-[11px] sm:text-xs uppercase font-bold tracking-wider shadow-sm hover:shadow-md transition-all flex items-center gap-1.5 sm:gap-2 cursor-pointer"
             >
               <span>BOOK TREATMENT</span>
             </button>
@@ -112,7 +105,7 @@ export default function Navbar({ onOpenBookModal, onOpenTrackModal }) {
 
         {/* Mobile Nav Drawer */}
         {mobileMenuOpen && (
-          <div className="lg:hidden border-t border-[#E2E8E4] bg-white px-6 py-4 space-y-3 font-label text-xs uppercase tracking-wider font-semibold animate-fade-in shadow-lg">
+          <div className="lg:hidden border-t border-[#E2E8E4] bg-white px-6 py-4 space-y-3 font-label text-xs uppercase tracking-wider font-semibold shadow-lg animate-fade-in">
             <Link 
               to="/" 
               onClick={() => setMobileMenuOpen(false)}
@@ -134,13 +127,6 @@ export default function Navbar({ onOpenBookModal, onOpenTrackModal }) {
             >
               GALERI TRANSFORMASI
             </Link>
-            <a 
-              href="/#outlets" 
-              onClick={() => setMobileMenuOpen(false)}
-              className="block py-2 text-[#143826]"
-            >
-              LOCATIONS (OUTLET SEMARANG)
-            </a>
             <button 
               type="button"
               onClick={() => {
