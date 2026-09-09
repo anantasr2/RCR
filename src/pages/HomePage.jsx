@@ -86,7 +86,7 @@ export default function HomePage() {
           </div>
 
           {/* Right Image Column */}
-          <div className="lg:col-span-6 relative h-[420px] sm:h-[500px] lg:h-[560px] flex items-end justify-center">
+          <div className="lg:col-span-6 relative h-[320px] sm:h-[440px] lg:h-[560px] flex items-end justify-center">
             <div className="relative w-full h-full overflow-hidden rounded-2xl shadow-lg border border-[#D8E5DC]">
               <img 
                 src={heroArtisanImg} 

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 export default function ReviewCarousel() {
   const reviews = [
@@ -40,52 +40,78 @@ export default function ReviewCarousel() {
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [itemsPerPage, setItemsPerPage] = useState(3);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 640) {
+        setItemsPerPage(1);
+      } else if (window.innerWidth < 1024) {
+        setItemsPerPage(2);
+      } else {
+        setItemsPerPage(3);
+      }
+    };
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const maxIndex = Math.max(0, reviews.length - itemsPerPage);
 
   const prevReview = () => {
-    setCurrentIndex((prev) => (prev === 0 ? reviews.length - 3 : prev - 1));
+    setCurrentIndex((prev) => (prev <= 0 ? maxIndex : prev - 1));
   };
 
   const nextReview = () => {
-    setCurrentIndex((prev) => (prev >= reviews.length - 3 ? 0 : prev + 1));
+    setCurrentIndex((prev) => (prev >= maxIndex ? 0 : prev + 1));
   };
+
+  const visibleReviews = reviews.slice(currentIndex, currentIndex + itemsPerPage);
 
   return (
     <div className="w-full">
-      {/* Desktop 3-Card Grid or Mobile Carousel */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {reviews.slice(currentIndex, currentIndex + 3).map((rev, idx) => (
+      {/* Responsive Grid: 1 col on mobile, 2 cols on tablet, 3 cols on desktop */}
+      <div className={`grid gap-5 sm:gap-6 ${
+        itemsPerPage === 1 
+          ? 'grid-cols-1 max-w-lg mx-auto' 
+          : itemsPerPage === 2 
+            ? 'grid-cols-1 sm:grid-cols-2' 
+            : 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'
+      }`}>
+        {visibleReviews.map((rev, idx) => (
           <div 
             key={idx}
-            className="bg-[#11241B] rounded-2xl p-6 flex flex-col justify-between shadow-lg hover:shadow-xl border border-[#234833] transition-all duration-300 hover:-translate-y-1"
+            className="bg-[#11241B] rounded-2xl p-5 sm:p-6 flex flex-col justify-between shadow-lg hover:shadow-xl border border-[#234833] transition-all duration-300 hover:-translate-y-1"
           >
-            <div className="space-y-4 mb-6">
-              <div className="flex items-center justify-between">
-                <div className="flex text-[#E6A117] text-sm gap-0.5">
+            <div className="space-y-3 sm:space-y-4 mb-5 sm:mb-6">
+              <div className="flex items-center justify-between gap-2">
+                <div className="flex text-[#E6A117] text-sm gap-0.5 shrink-0">
                   {[...Array(rev.rating)].map((_, i) => (
                     <span key={i} className="material-symbols-outlined text-sm" style={{ fontVariationSettings: "'FILL' 1" }}>
                       star
                     </span>
                   ))}
                 </div>
-                <span className="font-label text-[10px] uppercase text-[#73D49B] bg-[#183627] border border-[#2B543D] px-2 py-0.5 rounded">
+                <span className="font-label text-[9px] sm:text-[10px] uppercase text-[#73D49B] bg-[#183627] border border-[#2B543D] px-2 py-0.5 rounded truncate">
                   {rev.item}
                 </span>
               </div>
-              <p className="font-body text-sm text-white italic leading-relaxed">
+              <p className="font-body text-xs sm:text-sm text-white italic leading-relaxed">
                 {rev.text}
               </p>
             </div>
 
             <div className="flex items-center justify-between pt-4 border-t border-[#234833]">
               <div>
-                <span className="font-body text-sm font-bold text-white block">
+                <span className="font-body text-xs sm:text-sm font-bold text-white block">
                   {rev.name}
                 </span>
-                <span className="font-label text-xs text-[#A7C2B2]">
+                <span className="font-label text-[11px] sm:text-xs text-[#A7C2B2]">
                   {rev.role}
                 </span>
               </div>
-              <span className="material-symbols-outlined text-[#73D49B] text-xl">
+              <span className="material-symbols-outlined text-[#73D49B] text-lg sm:text-xl shrink-0">
                 verified
               </span>
             </div>
@@ -94,20 +120,20 @@ export default function ReviewCarousel() {
       </div>
 
       {/* Pagination Controls */}
-      <div className="flex items-center justify-center gap-3 mt-8">
+      <div className="flex items-center justify-center gap-3 mt-6 sm:mt-8">
         <button 
           onClick={prevReview}
-          className="w-10 h-10 rounded-full bg-[#183627] hover:bg-[#204734] text-white border border-[#2B543D] flex items-center justify-center transition-colors"
+          className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#183627] hover:bg-[#204734] text-white border border-[#2B543D] flex items-center justify-center transition-colors"
           aria-label="Previous Review"
         >
           <span className="material-symbols-outlined text-base">chevron_left</span>
         </button>
-        <span className="font-label text-xs text-[#A7C2B2] tracking-wider uppercase font-semibold">
-          Review {currentIndex + 1} - {currentIndex + 3} of {reviews.length}
+        <span className="font-label text-[11px] sm:text-xs text-[#A7C2B2] tracking-wider uppercase font-semibold">
+          {currentIndex + 1} - {Math.min(currentIndex + itemsPerPage, reviews.length)} of {reviews.length}
         </span>
         <button 
           onClick={nextReview}
-          className="w-10 h-10 rounded-full bg-[#183627] hover:bg-[#204734] text-white border border-[#2B543D] flex items-center justify-center transition-colors"
+          className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#183627] hover:bg-[#204734] text-white border border-[#2B543D] flex items-center justify-center transition-colors"
           aria-label="Next Review"
         >
           <span className="material-symbols-outlined text-base">chevron_right</span>

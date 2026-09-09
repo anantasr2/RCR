@@ -1,14 +1,34 @@
-import React, { useState, useRef, useCallback, useMemo } from 'react';
+import React, { useState, useRef, useCallback, useEffect, useMemo } from 'react';
 import { Link, useOutletContext } from 'react-router-dom';
 
 export default function GaleriPage() {
   const { onOpenConsultation } = useOutletContext();
   const [selectedCategory, setSelectedCategory] = useState('all');
 
-  // Slider State for the center Before-After frame
+  // Slider State for the centerpiece Before-After frame
   const [sliderPos, setSliderPos] = useState(50);
+  const [sliderWidth, setSliderWidth] = useState(0);
   const containerRef = useRef(null);
   const isDraggingRef = useRef(false);
+
+  useEffect(() => {
+    if (!containerRef.current) return;
+    const updateWidth = () => {
+      if (containerRef.current) {
+        setSliderWidth(containerRef.current.clientWidth);
+      }
+    };
+    updateWidth();
+
+    const observer = new ResizeObserver(updateWidth);
+    observer.observe(containerRef.current);
+
+    window.addEventListener('resize', updateWidth);
+    return () => {
+      observer.disconnect();
+      window.removeEventListener('resize', updateWidth);
+    };
+  }, []);
 
   const handleSliderMove = useCallback((clientX) => {
     if (!containerRef.current) return;
@@ -114,7 +134,7 @@ export default function GaleriPage() {
       {/* ========================================================================= */}
       {/* 01 — EDITORIAL SHOWCASE HERO                                              */}
       {/* ========================================================================= */}
-      <section className="relative pt-8 sm:pt-12 pb-14 sm:pb-20 bg-white overflow-hidden">
+      <section className="relative pt-6 sm:pt-10 md:pt-14 pb-12 sm:pb-16 md:pb-20 bg-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           {/* Top Meta Title */}
@@ -150,7 +170,7 @@ export default function GaleriPage() {
             <img 
               src="https://lh3.googleusercontent.com/aida/AEtjO1WydXmcEKZALEGmN5wOvyhloOIK6IKyXvjctfLApJOSRFFLskusYPJ61Y9-8frlCDRDkbYr_-dFTwHeSK53V2Ad8GmdxKn1eyM3ge7GPFA9YWg6pSBJxGdUMmDlzQ7qLFh8M17TjfGHqr2Gc4vOGbMVjEHBxUn_Xg7Roq_ppiW9KNnpYb4yoWeAzUm3QpDX7GmjpXRPuXSjUYDYLD6fYhaJvOX3OTBVyr5iSq7K0y4BH0fCzptsccFJDA4" 
               alt="Master Artisan RCR Workshop" 
-              className="w-full h-[420px] sm:h-[540px] md:h-[640px] object-cover object-center transform duration-700 group-hover:scale-[1.02] filter brightness-95"
+              className="w-full h-[360px] sm:h-[480px] md:h-[600px] lg:h-[640px] object-cover object-center transform duration-700 group-hover:scale-[1.02] filter brightness-95"
             />
             
             {/* Gradient Overlay */}
@@ -200,14 +220,14 @@ export default function GaleriPage() {
       {/* ========================================================================= */}
       <section 
         id="before-after" 
-        className="py-14 sm:py-20 md:py-28 bg-[#F6FBF5] border-y border-[#DCE6DD] relative select-none"
+        className="py-12 sm:py-18 md:py-24 bg-[#F6FBF5] border-y border-[#DCE6DD] relative select-none"
         onMouseUp={handleMouseUp}
         onMouseLeave={handleMouseUp}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           {/* Section Header */}
-          <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
+          <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
             <span className="inline-block text-xs font-mono font-bold tracking-[0.25em] text-[#143826] uppercase mb-3 px-3.5 py-1 rounded-full bg-white border border-[#DCE6DD]">
               Transformation Centerpiece
             </span>
@@ -219,28 +239,28 @@ export default function GaleriPage() {
             </p>
           </div>
 
-          {/* Before After Interactive Frame with Gold Handle (#ECC15A) */}
+          {/* Before After Interactive Frame */}
           <div className="max-w-5xl mx-auto">
-            <div className="bg-white p-3 sm:p-6 rounded-3xl shadow-xl border border-[#DCE6DD]">
+            <div className="bg-white p-3 sm:p-5 md:p-6 rounded-3xl shadow-xl border border-[#DCE6DD]">
               
               <div 
                 ref={containerRef}
-                className="relative rounded-2xl overflow-hidden h-[340px] sm:h-[480px] md:h-[580px] cursor-ew-resize bg-[#0B1A13]"
+                className="relative rounded-2xl overflow-hidden h-[300px] sm:h-[440px] md:h-[540px] cursor-ew-resize bg-[#0B1A13]"
                 onMouseDown={handleMouseDown}
                 onMouseMove={handleMouseMove}
                 onTouchMove={handleTouchMove}
               >
-                {/* AFTER IMAGE (Background / Full Width) */}
+                {/* AFTER IMAGE (Background Base) */}
                 <img 
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuDllYfG9tAgGNVdMi0fjaGIS0ki0IGCf9ORYR94ChCRqFvuf3otPhfqiKD1aFLm7r8rsjYeGmmlM6Mr962TvMMSoyvvuKNV92UH-8_ksdMJAeWfTdLp1cC5w8IV6USsg6FFfvCYsoLgJTM_LW6Ulrk5duEUFN_v2SuhuMsn1sk0FHpn8fkat_q5Qxe74WhMDVRE4C2yAlsMU1_Cwr58aruJIYDgTw8xNRxvJJcuzWnvAAawWPRDdWYg" 
                   alt="After Clean Yeezy Restoration" 
                   className="absolute inset-0 w-full h-full object-cover object-center pointer-events-none"
                 />
-                <div className="absolute top-4 sm:top-6 right-4 sm:right-6 z-10 px-3 sm:px-4 py-1.5 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-white font-mono text-[10px] sm:text-xs font-bold tracking-widest uppercase">
+                <div className="absolute top-3 sm:top-5 right-3 sm:right-5 z-10 px-3 sm:px-4 py-1.5 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-white font-mono text-[10px] sm:text-xs font-bold tracking-widest uppercase">
                   AFTER · HASIL AKHIR
                 </div>
 
-                {/* BEFORE IMAGE LAYER (Clipped overlay) */}
+                {/* BEFORE IMAGE LAYER (Clipped overlay with exact pixel alignment) */}
                 <div 
                   className="absolute top-0 left-0 h-full overflow-hidden z-10"
                   style={{ width: `${sliderPos}%` }}
@@ -248,9 +268,13 @@ export default function GaleriPage() {
                   <img 
                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuDllYfG9tAgGNVdMi0fjaGIS0ki0IGCf9ORYR94ChCRqFvuf3otPhfqiKD1aFLm7r8rsjYeGmmlM6Mr962TvMMSoyvvuKNV92UH-8_ksdMJAeWfTdLp1cC5w8IV6USsg6FFfvCYsoLgJTM_LW6Ulrk5duEUFN_v2SuhuMsn1sk0FHpn8fkat_q5Qxe74WhMDVRE4C2yAlsMU1_Cwr58aruJIYDgTw8xNRxvJJcuzWnvAAawWPRDdWYg" 
                     alt="Before Dirty Yeezy" 
-                    className="absolute inset-0 w-full h-full min-w-[700px] sm:min-w-[900px] md:min-w-[1000px] object-cover object-left pointer-events-none filter sepia-[0.35] brightness-90"
+                    style={{ 
+                      width: sliderWidth ? `${sliderWidth}px` : '100%',
+                      maxWidth: 'none'
+                    }}
+                    className="h-full object-cover object-left pointer-events-none filter sepia-[0.35] brightness-90"
                   />
-                  <div className="absolute top-4 sm:top-6 left-4 sm:left-6 z-20 px-3 sm:px-4 py-1.5 rounded-full bg-[#C2101C]/90 backdrop-blur-md border border-white/20 text-white font-mono text-[10px] sm:text-xs font-bold tracking-widest uppercase">
+                  <div className="absolute top-3 sm:top-5 left-3 sm:left-5 z-20 px-3 sm:px-4 py-1.5 rounded-full bg-[#C2101C]/90 backdrop-blur-md border border-white/20 text-white font-mono text-[10px] sm:text-xs font-bold tracking-widest uppercase">
                     BEFORE · KONDISI AWAL
                   </div>
                 </div>
@@ -260,8 +284,8 @@ export default function GaleriPage() {
                   className="absolute top-0 bottom-0 z-30 w-1 bg-[#ECC15A] flex items-center justify-center -translate-x-1/2 shadow-[0_0_12px_rgba(0,0,0,0.4)]"
                   style={{ left: `${sliderPos}%` }}
                 >
-                  <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-[#ECC15A] text-[#143826] shadow-2xl flex items-center justify-center font-extrabold text-sm border-2 border-white pointer-events-none">
-                    <span className="material-symbols-outlined text-lg sm:text-xl font-bold">
+                  <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-[#ECC15A] text-[#143826] shadow-2xl flex items-center justify-center font-extrabold text-sm border-2 border-white pointer-events-none">
+                    <span className="material-symbols-outlined text-base sm:text-xl font-bold">
                       unfold_more
                     </span>
                   </div>
@@ -270,7 +294,7 @@ export default function GaleriPage() {
               </div>
 
               {/* Caption & Action bar below slider */}
-              <div className="mt-5 sm:mt-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-4 sm:pt-5 border-t border-[#DCE6DD]/70 px-2">
+              <div className="mt-4 sm:mt-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-4 sm:pt-5 border-t border-[#DCE6DD]/70 px-1 sm:px-2">
                 <div>
                   <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#C2101C] font-mono mb-1">
                     <span className="w-2 h-2 rounded-full bg-[#C2101C]"></span>
@@ -305,28 +329,36 @@ export default function GaleriPage() {
       </section>
 
       {/* ========================================================================= */}
-      {/* 03 — CATEGORY FILTER NAVIGATION (STICKY BAR)                             */}
+      {/* 03 & 04 — CASE STUDY IN-DEPTH WITH INTEGRATED NON-STICKY CATEGORY FILTER  */}
       {/* ========================================================================= */}
-      <section className="py-6 sm:py-8 bg-white sticky top-20 z-30 border-b border-[#DCE6DD] backdrop-blur-md bg-white/95 shadow-sm">
+      {/* 
+          AS REQUESTED:
+          1. Category bar is NOT sticky (tidak ikut turun saat scroll)
+          2. The left side is "Case Study In-Depth" & "From Worn to Ready."
+          3. The subtitle is removed
+          4. Category filter buttons sit alongside
+      */}
+      <section className="py-12 sm:py-16 md:py-24 bg-white border-b border-[#DCE6DD]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
-            
+          
+          {/* Integrated Header: Left "Case Study In-Depth" / Right Categories */}
+          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12 sm:mb-16 pb-6 sm:pb-8 border-b border-[#DCE6DD]">
             <div>
-              <span className="text-[10px] font-mono font-bold tracking-[0.25em] text-[#71857A] uppercase block">
-                Filter Visual Portfolio
+              <span className="text-xs font-mono font-bold tracking-[0.25em] text-[#C2101C] uppercase block mb-1.5 sm:mb-2">
+                Case Study In-Depth
               </span>
-              <span className="text-lg sm:text-xl font-extrabold text-[#143826] uppercase tracking-tight font-headline">
-                Kategori Karya Restorasi
-              </span>
+              <h2 className="text-2xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-[#143826] uppercase font-headline">
+                From Worn to Ready.
+              </h2>
             </div>
 
-            {/* Filter Text Tab Buttons */}
-            <div className="flex items-center gap-2 sm:gap-3 overflow-x-auto no-scrollbar py-1 text-xs font-bold tracking-wider uppercase font-mono">
+            {/* Category Filter Buttons (Non-sticky, wraps nicely on tablet/mobile) */}
+            <div className="flex flex-wrap items-center gap-2 sm:gap-2.5 font-mono text-xs font-bold tracking-wider uppercase">
               {categories.map((cat) => (
                 <button
                   key={cat.id}
                   onClick={() => setSelectedCategory(cat.id)}
-                  className={`px-4 py-2 rounded-full transition-all whitespace-nowrap ${
+                  className={`px-3.5 sm:px-4 py-2 rounded-full transition-all whitespace-nowrap ${
                     selectedCategory === cat.id
                       ? 'bg-[#143826] text-white shadow-sm font-bold'
                       : 'bg-white hover:bg-[#EEF5EF] text-[#55695E] hover:text-[#143826] border border-[#DCE6DD]'
@@ -336,27 +368,6 @@ export default function GaleriPage() {
                 </button>
               ))}
             </div>
-
-          </div>
-        </div>
-      </section>
-
-      {/* ========================================================================= */}
-      {/* 04 — TRANSFORMATION STORIES (EDITORIAL CASE STUDIES ASYMMETRICAL)         */}
-      {/* ========================================================================= */}
-      <section className="py-16 sm:py-20 md:py-28 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
-          <div className="mb-12 sm:mb-16">
-            <span className="text-xs font-mono font-bold tracking-[0.25em] text-[#C2101C] uppercase block mb-2">
-              Case Study In-Depth
-            </span>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-[#143826] uppercase font-headline">
-              From Worn to Ready.
-            </h2>
-            <p className="text-xs sm:text-sm md:text-base text-[#55695E] mt-2 max-w-xl font-body">
-              Setiap barang memiliki cerita dan memori. Di balik setiap restorasi terdapat riset material, pengujian pH, dan keahlian tangan artisan.
-            </p>
           </div>
 
           {/* Case 01: Image Left, Editorial Content Right */}
@@ -366,7 +377,7 @@ export default function GaleriPage() {
                 <img 
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5iL-nYx2kyCq4bkP9MOqFDe-KkNJ-guOjAWmu-I4Ebk-OmCKgxIK6i6rBF3qcdXDc5jqsDSg2pVrBeltBCU78SSCqiUk2qP9enIHYz7oVUCI7UnLm-R-SYU5k-p-qpoR04EKLWnK2xzUgzX23rsO6dJw4teP0byAtezgB1L0tBWrrIh7d0tbfilJpK4u25LYNacZl49uXr_fMInUjuZeOE4pwRl7ngtyLOrt11BkOdeM88Oufnybo" 
                   alt="Footwear &amp; Leather Restoration" 
-                  className="w-full h-[320px] sm:h-[420px] md:h-[480px] object-cover object-center transform duration-500 group-hover:scale-105"
+                  className="w-full h-[280px] sm:h-[380px] md:h-[480px] object-cover object-center transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute top-4 left-4 px-3.5 py-1.5 rounded-full bg-white/90 backdrop-blur-md text-[10px] sm:text-[11px] font-mono font-bold text-[#143826] uppercase border border-[#DCE6DD]">
                   Case #01 · Footwear &amp; Vibram
@@ -377,7 +388,7 @@ export default function GaleriPage() {
               </div>
             </div>
 
-            <div className="lg:col-span-5 space-y-5 sm:space-y-6">
+            <div className="lg:col-span-5 space-y-4 sm:space-y-6">
               <div className="text-xs font-mono font-bold tracking-[0.2em] text-[#143826] uppercase">
                 01 / SHOE RESTORATION &amp; VIBRAM RECRAFT
               </div>
@@ -386,7 +397,7 @@ export default function GaleriPage() {
                 Red Wing Heritage Boots: Re-Welt &amp; Italian Vibram Christy Soles
               </h3>
 
-              <div className="grid grid-cols-3 gap-2 sm:gap-3 py-4 border-y border-[#DCE6DD] text-xs">
+              <div className="grid grid-cols-3 gap-2 sm:gap-3 py-3.5 sm:py-4 border-y border-[#DCE6DD] text-xs">
                 <div>
                   <span className="block text-[10px] font-mono text-[#71857A] uppercase font-bold">From:</span>
                   <span className="font-medium text-[#2F3E36]">Sol mengeras, retak, &amp; welt putus</span>
@@ -420,7 +431,7 @@ export default function GaleriPage() {
           {/* Case 02: Editorial Content Left, Image Right (Reversed Rhythm) */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
             
-            <div className="lg:col-span-5 space-y-5 sm:space-y-6 order-2 lg:order-1">
+            <div className="lg:col-span-5 space-y-4 sm:space-y-6 order-2 lg:order-1">
               <div className="text-xs font-mono font-bold tracking-[0.2em] text-[#C2101C] uppercase">
                 02 / LUXURY BAG RESTORATION
               </div>
@@ -429,7 +440,7 @@ export default function GaleriPage() {
                 Hermès Birkin Togo Leather: Re-Coloring, Corner Re-Piping &amp; Hardware Polish
               </h3>
 
-              <div className="grid grid-cols-3 gap-2 sm:gap-3 py-4 border-y border-[#DCE6DD] text-xs">
+              <div className="grid grid-cols-3 gap-2 sm:gap-3 py-3.5 sm:py-4 border-y border-[#DCE6DD] text-xs">
                 <div>
                   <span className="block text-[10px] font-mono text-[#71857A] uppercase font-bold">From:</span>
                   <span className="font-medium text-[#2F3E36]">Sudut robek, warna pudar &amp; kusam</span>
@@ -464,7 +475,7 @@ export default function GaleriPage() {
                 <img 
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5IWYe6xKLsrDbDKXGbLW2RBqs3RGWp2sKVrm4dfCZ1uswTVgBH_ePUIYgFo4qO9iMjiKATY0CHyqPRVSUD5c3x-exI3rpQZYNhblbEIw_lx304GlOFPrYAaDkBvIc-LdKT10GKKuMRtaLlLUbCGONTYyDm4rGQuR-JUD_GBqBncH0W2bcsAHWsXjFasbrP1njtqP2eKK_m1y_3R4B4HmV_qzT5O6wcv6SXgfIlJWBJKVB7_qWwaXH" 
                   alt="Handbag Leather Detailing" 
-                  className="w-full h-[320px] sm:h-[420px] md:h-[480px] object-cover object-right transform duration-500 group-hover:scale-105"
+                  className="w-full h-[280px] sm:h-[380px] md:h-[480px] object-cover object-right transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute top-4 left-4 px-3.5 py-1.5 rounded-full bg-white/90 backdrop-blur-md text-[10px] sm:text-[11px] font-mono font-bold text-[#143826] uppercase border border-[#DCE6DD]">
                   Case #02 · Luxury Handbag
@@ -483,7 +494,7 @@ export default function GaleriPage() {
       {/* ========================================================================= */}
       {/* 05 — REPAIR & RESTORATION (DRAMATIC DEEP FOREST DARK SHOWCASE)            */}
       {/* ========================================================================= */}
-      <section className="py-16 sm:py-24 md:py-32 bg-[#0B1A13] text-white relative overflow-hidden">
+      <section className="py-14 sm:py-20 md:py-28 bg-[#0B1A13] text-white relative overflow-hidden">
         {/* Ambient subtle glow */}
         <div className="absolute top-0 right-0 w-96 h-96 bg-[#143826]/30 rounded-full blur-3xl pointer-events-none"></div>
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#C2101C]/15 rounded-full blur-3xl pointer-events-none"></div>
@@ -506,7 +517,7 @@ export default function GaleriPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
             
             {/* Pillar 01: Sole Swap & Vibram */}
-            <div className="p-6 rounded-3xl bg-white/5 border border-white/10 hover:border-[#ECC15A]/60 transition-all duration-300 group hover:-translate-y-1 flex flex-col justify-between">
+            <div className="p-5 sm:p-6 rounded-3xl bg-white/5 border border-white/10 hover:border-[#ECC15A]/60 transition-all duration-300 group hover:-translate-y-1 flex flex-col justify-between">
               <div>
                 <div className="w-12 h-12 rounded-2xl bg-[#143826]/70 border border-white/10 flex items-center justify-center mb-6 text-[#ECC15A]">
                   <span className="material-symbols-outlined text-2xl">hardware</span>
@@ -526,7 +537,7 @@ export default function GaleriPage() {
             </div>
 
             {/* Pillar 02: Repaint & Unyellowing */}
-            <div className="p-6 rounded-3xl bg-white/5 border border-white/10 hover:border-[#ECC15A]/60 transition-all duration-300 group hover:-translate-y-1 flex flex-col justify-between">
+            <div className="p-5 sm:p-6 rounded-3xl bg-white/5 border border-white/10 hover:border-[#ECC15A]/60 transition-all duration-300 group hover:-translate-y-1 flex flex-col justify-between">
               <div>
                 <div className="w-12 h-12 rounded-2xl bg-[#143826]/70 border border-white/10 flex items-center justify-center mb-6 text-[#ECC15A]">
                   <span className="material-symbols-outlined text-2xl">format_paint</span>
@@ -545,8 +556,8 @@ export default function GaleriPage() {
               </div>
             </div>
 
-            {/* Pillar 03: Leather Bag Spa & Hardware */}
-            <div className="p-6 rounded-3xl bg-white/5 border border-white/10 hover:border-[#ECC15A]/60 transition-all duration-300 group hover:-translate-y-1 flex flex-col justify-between">
+            {/* Pillar 03: Luxury Leather Spa & Hardware */}
+            <div className="p-5 sm:p-6 rounded-3xl bg-white/5 border border-white/10 hover:border-[#ECC15A]/60 transition-all duration-300 group hover:-translate-y-1 flex flex-col justify-between">
               <div>
                 <div className="w-12 h-12 rounded-2xl bg-[#143826]/70 border border-white/10 flex items-center justify-center mb-6 text-[#ECC15A]">
                   <span className="material-symbols-outlined text-2xl">diamond</span>
@@ -566,7 +577,7 @@ export default function GaleriPage() {
             </div>
 
             {/* Pillar 04: Koper & Luggage Emergency */}
-            <div className="p-6 rounded-3xl bg-white/5 border border-white/10 hover:border-[#ECC15A]/60 transition-all duration-300 group hover:-translate-y-1 flex flex-col justify-between">
+            <div className="p-5 sm:p-6 rounded-3xl bg-white/5 border border-white/10 hover:border-[#ECC15A]/60 transition-all duration-300 group hover:-translate-y-1 flex flex-col justify-between">
               <div>
                 <div className="w-12 h-12 rounded-2xl bg-[#143826]/70 border border-white/10 flex items-center justify-center mb-6 text-[#ECC15A]">
                   <span className="material-symbols-outlined text-2xl">luggage</span>
@@ -593,10 +604,10 @@ export default function GaleriPage() {
       {/* ========================================================================= */}
       {/* 06 — BEHIND THE CRAFT (ATELIER PROCESS & AUTHENTIC WORKSHOP)              */}
       {/* ========================================================================= */}
-      <section className="py-16 sm:py-20 md:py-28 bg-white border-b border-[#DCE6DD]">
+      <section className="py-14 sm:py-20 md:py-28 bg-white border-b border-[#DCE6DD]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
-          <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
+          <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-16">
             <span className="text-xs font-mono font-bold tracking-[0.25em] text-[#143826] uppercase block mb-2 px-3 py-1 rounded-full bg-[#EEF5EF] border border-[#DCE6DD] inline-block">
               Authentic Workshop Process
             </span>
@@ -609,7 +620,7 @@ export default function GaleriPage() {
           </div>
 
           {/* Process 5-Step Grid Cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5 sm:gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 sm:gap-6">
             
             <div className="p-5 sm:p-6 rounded-2xl bg-[#F6FBF5] border border-[#DCE6DD] hover:bg-white hover:shadow-lg transition-all duration-300">
               <div className="text-3xl font-extrabold text-[#C2101C] font-mono mb-3">01</div>
@@ -689,7 +700,7 @@ export default function GaleriPage() {
       {/* ========================================================================= */}
       {/* 07 — ALL WORK (FULL EDITORIAL MASONRY GALLERY)                            */}
       {/* ========================================================================= */}
-      <section className="py-16 sm:py-20 md:py-28 bg-[#F6FBF5]">
+      <section className="py-14 sm:py-20 md:py-28 bg-[#F6FBF5]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10 sm:mb-12">
@@ -713,7 +724,7 @@ export default function GaleriPage() {
                 key={item.id}
                 className="group relative rounded-3xl overflow-hidden bg-white border border-[#DCE6DD] shadow-sm hover:shadow-2xl transition-all duration-300 flex flex-col justify-between"
               >
-                <div className="h-64 sm:h-72 md:h-80 overflow-hidden bg-[#EEF5EF] relative">
+                <div className="h-60 sm:h-72 md:h-80 overflow-hidden bg-[#EEF5EF] relative">
                   <img 
                     src={item.img} 
                     alt={item.title} 
@@ -749,8 +760,8 @@ export default function GaleriPage() {
             ))}
           </div>
 
-          {/* Consultation Action */}
-          <div className="mt-12 sm:mt-14 text-center">
+          {/* Action */}
+          <div className="mt-10 sm:mt-14 text-center">
             <button 
               onClick={() => onOpenConsultation({ title: 'Konsultasi Arsip Portfolio Galeri' })}
               className="inline-flex items-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 rounded-full bg-white hover:bg-[#EEF5EF] text-[#143826] font-bold text-xs uppercase tracking-widest border border-[#DCE6DD] shadow-sm hover:shadow transition-all font-label"
