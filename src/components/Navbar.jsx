@@ -31,7 +31,7 @@ export default function Navbar({ onOpenBookModal, onOpenTrackModal }) {
                 RCR INDONESIA
               </span>
               <span className="font-label text-[9px] sm:text-[10px] text-[#526B5C] tracking-widest font-bold uppercase mt-1">
-                ATELIER REPAIR • CLEANING • RESTORE
+                REPAIR • CLEANING • RESTORE
               </span>
             </div>
           </Link>

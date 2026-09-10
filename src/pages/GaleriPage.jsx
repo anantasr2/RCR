@@ -506,7 +506,7 @@ export default function GaleriPage() {
               Structural Engineering &amp; Patina Craft
             </span>
             <h2 className="text-3xl sm:text-4xl md:text-6xl font-extrabold tracking-tight uppercase leading-[1.05] font-headline">
-              Damaged Doesn't<br></br> 
+              Damaged Doesn't<br />
               Mean Done.
             </h2>
             <p className="text-xs sm:text-sm md:text-base text-white/70 mt-3 font-body">
