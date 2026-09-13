@@ -68,7 +68,7 @@ export default function GaleriPage() {
       badge: 'Deep Clean & Unyellow',
       title: 'Nike Air Jordan 1 Chicago',
       desc: 'Restorasi warna merah, pemutihan midsole, dan pelindung hidrasi kulit asli.',
-      img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAWV6PTmxA_N56zhodlWLkAMyFQaIH7TXEf9k6Wd1xBjcKcoro9YaKsW4XIvKLqjNs8hqJIiaaWXKkKxwwEECX1BHglsV3gHX-udiN73e_JuqkXO4WQZvhOTWx4siqUjaR9A7VAWueXN9llqJrWaCznMNUafHMwZQ3WIwgz7Lzy5eLbdu7djisEiK1w_qaPU9DhMllu0PJ9FuUIgkgBmVgob0CP3Lhepti76TZdWu12aivp9_xtRvXr',
+      img: 'https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=800&q=80',
       price: 'Rp 145.000'
     },
     {
@@ -78,7 +78,7 @@ export default function GaleriPage() {
       badge: 'Ozone Sterilization',
       title: 'Adidas Yeezy 350 Triple White',
       desc: 'Ekstraksi noda tanah liat dari rajutan kain primeknit dan sterilisasi anti-jamur.',
-      img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDEo5NFK0gYFKBFUEKCE5N32EexIgo1B5GivBaiRyMCQaXLj-YFv1QUbiWvR02qU4glgT7sJksPYjCzfkeN6M5o9lN8LR9kr-43ODVF98WXbfDlMQBcnJHrJZcqzzUhUj8c-X8aucFMFsezKGg-FMytFjXB6_zxwbmIu4uR6_hUlfCtvRCTMVrirOqN2rKq3hxbw2n121_F2903MOz51XTUyhu-HKr9lPDwj_J8sK5reg8Onr_Y5cR_',
+      img: 'https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?auto=format&fit=crop&w=800&q=80',
       price: 'Rp 90.000'
     },
     {
@@ -88,7 +88,7 @@ export default function GaleriPage() {
       badge: 'Edge Paint & Buff',
       title: 'Chanel Classic Flap Caviar',
       desc: 'Pembersihan debu mikro sudut jahitan, pelembaban kulit, dan pelapisan rantai emas.',
-      img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuD4Gp7Zxi55Gr-i6HT936_kyvZLSkfrtslB31pCQ-CJdV-qnwmCM8F7awut9Vnvcg9Qy44u9UEoRrofPrKFb2Fnvm8pxQMgZDkbCzI5wCOlMlnSrpxvAPv9aLd7sZMqN8r0e5QCPufbbXKzExy4Su_uxTWYHKECBhkuIBVG8eB52WP0C5Lp_Wwk56n1_J6qWczKI0MoslqxoAKLOqQkemqC0BQOGpDl-vpzfWpa3f3Szrdfve66saJY',
+      img: 'https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=800&q=80',
       price: 'Rp 180.000'
     },
     {
@@ -98,7 +98,7 @@ export default function GaleriPage() {
       badge: 'Vibram 4014 Morflex',
       title: 'Red Wing 875 Moc Toe',
       desc: 'Re-welt jahitan Blake & sol baru Vibram Christy Morflex original Italia.',
-      img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuD5iL-nYx2kyCq4bkP9MOqFDe-KkNJ-guOjAWmu-I4Ebk-OmCKgxIK6i6rBF3qcdXDc5jqsDSg2pVrBeltBCU78SSCqiUk2qP9enIHYz7oVUCI7UnLm-R-SYU5k-p-qpoR04EKLWnK2xzUgzX23rsO6dJw4teP0byAtezgB1L0tBWrrIh7d0tbfilJpK4u25LYNacZl49uXr_fMInUjuZeOE4pwRl7ngtyLOrt11BkOdeM88Oufnybo',
+      img: 'https://images.unsplash.com/photo-1520639888713-7851133b1ed0?auto=format&fit=crop&w=800&q=80',
       price: 'Rp 450.000'
     },
     {
@@ -108,7 +108,7 @@ export default function GaleriPage() {
       badge: 'Corner Re-Piping',
       title: 'Hermès Birkin Togo Leather',
       desc: 'Pencampuran warna presisi 1:1, pelapisan sudut kulit, dan pemolesan hardware.',
-      img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuC5IWYe6xKLsrDbDKXGbLW2RBqs3RGWp2sKVrm4dfCZ1uswTVgBH_ePUIYgFo4qO9iMjiKATY0CHyqPRVSUD5c3x-exI3rpQZYNhblbEIw_lx304GlOFPrYAaDkBvIc-LdKT10GKKuMRtaLlLUbCGONTYyDm4rGQuR-JUD_GBqBncH0W2bcsAHWsXjFasbrP1njtqP2eKK_m1y_3R4B4HmV_qzT5O6wcv6SXgfIlJWBJKVB7_qWwaXH',
+      img: 'https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=800&q=80',
       price: 'Rp 180.000'
     },
     {
@@ -118,7 +118,7 @@ export default function GaleriPage() {
       badge: 'Silent Spinner Wheels',
       title: 'Rimowa Classic Cabin Aluminium',
       desc: 'Penggantian 4 roda rubber double bearing 360° dan perataan dent body aluminium.',
-      img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDttzgycJc-0fe51SafNgzVWYJrOsxM-owVV8TQTkL2gzM7hlaDYnbW4y1MSJ-1A-wZJOQ4Ye9USiCTJd6DN3PoVl1_zByFLjrKUsrInkvhvv-Gi7e9iLHKkHx0hPQTsV80852-JvVI27mKCkPHVa3HOV2auJnoM5__PP842JztgqXj8xp_wnE3jnocREeMiTJgmv8MA8Uo67tD5RIZwGoQeuBc5bshvztRv8T_rXEXaTjQVRNcHWDb',
+      img: 'https://images.unsplash.com/photo-1565026057447-bc90a3dceb87?auto=format&fit=crop&w=800&q=80',
       price: 'Rp 380.000'
     }
   ];
@@ -168,7 +168,7 @@ export default function GaleriPage() {
           {/* Hero Visual Stage */}
           <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-[#0B1A13] group">
             <img 
-              src="https://lh3.googleusercontent.com/aida/AEtjO1WydXmcEKZALEGmN5wOvyhloOIK6IKyXvjctfLApJOSRFFLskusYPJ61Y9-8frlCDRDkbYr_-dFTwHeSK53V2Ad8GmdxKn1eyM3ge7GPFA9YWg6pSBJxGdUMmDlzQ7qLFh8M17TjfGHqr2Gc4vOGbMVjEHBxUn_Xg7Roq_ppiW9KNnpYb4yoWeAzUm3QpDX7GmjpXRPuXSjUYDYLD6fYhaJvOX3OTBVyr5iSq7K0y4BH0fCzptsccFJDA4" 
+              src="https://images.unsplash.com/photo-1511556532299-8f662fc26c06?auto=format&fit=crop&w=1200&q=80" 
               alt="Master Artisan RCR Workshop" 
               className="w-full h-[360px] sm:h-[480px] md:h-[600px] lg:h-[640px] object-cover object-center transform duration-700 group-hover:scale-[1.02] filter brightness-95"
             />
@@ -252,7 +252,7 @@ export default function GaleriPage() {
               >
                 {/* AFTER IMAGE (Background Base) */}
                 <img 
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDllYfG9tAgGNVdMi0fjaGIS0ki0IGCf9ORYR94ChCRqFvuf3otPhfqiKD1aFLm7r8rsjYeGmmlM6Mr962TvMMSoyvvuKNV92UH-8_ksdMJAeWfTdLp1cC5w8IV6USsg6FFfvCYsoLgJTM_LW6Ulrk5duEUFN_v2SuhuMsn1sk0FHpn8fkat_q5Qxe74WhMDVRE4C2yAlsMU1_Cwr58aruJIYDgTw8xNRxvJJcuzWnvAAawWPRDdWYg" 
+                  src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?auto=format&fit=crop&w=1200&q=80" 
                   alt="After Clean Yeezy Restoration" 
                   className="absolute inset-0 w-full h-full object-cover object-center pointer-events-none"
                 />
@@ -266,7 +266,7 @@ export default function GaleriPage() {
                   style={{ width: `${sliderPos}%` }}
                 >
                   <img 
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDllYfG9tAgGNVdMi0fjaGIS0ki0IGCf9ORYR94ChCRqFvuf3otPhfqiKD1aFLm7r8rsjYeGmmlM6Mr962TvMMSoyvvuKNV92UH-8_ksdMJAeWfTdLp1cC5w8IV6USsg6FFfvCYsoLgJTM_LW6Ulrk5duEUFN_v2SuhuMsn1sk0FHpn8fkat_q5Qxe74WhMDVRE4C2yAlsMU1_Cwr58aruJIYDgTw8xNRxvJJcuzWnvAAawWPRDdWYg" 
+                    src="https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?auto=format&fit=crop&w=1200&q=80" 
                     alt="Before Dirty Yeezy" 
                     style={{ 
                       width: sliderWidth ? `${sliderWidth}px` : '100%',
@@ -375,8 +375,8 @@ export default function GaleriPage() {
             <div className="lg:col-span-7">
               <div className="relative rounded-3xl overflow-hidden bg-[#EEF5EF] border border-[#DCE6DD] group shadow-lg">
                 <img 
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5iL-nYx2kyCq4bkP9MOqFDe-KkNJ-guOjAWmu-I4Ebk-OmCKgxIK6i6rBF3qcdXDc5jqsDSg2pVrBeltBCU78SSCqiUk2qP9enIHYz7oVUCI7UnLm-R-SYU5k-p-qpoR04EKLWnK2xzUgzX23rsO6dJw4teP0byAtezgB1L0tBWrrIh7d0tbfilJpK4u25LYNacZl49uXr_fMInUjuZeOE4pwRl7ngtyLOrt11BkOdeM88Oufnybo" 
-                  alt="Footwear &amp; Leather Restoration" 
+                  src="https://images.unsplash.com/photo-1520639888713-7851133b1ed0?auto=format&fit=crop&w=800&q=80" 
+                  alt="Footwear & Leather Restoration" 
                   className="w-full h-[280px] sm:h-[380px] md:h-[480px] object-cover object-center transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute top-4 left-4 px-3.5 py-1.5 rounded-full bg-white/90 backdrop-blur-md text-[10px] sm:text-[11px] font-mono font-bold text-[#143826] uppercase border border-[#DCE6DD]">
@@ -473,7 +473,7 @@ export default function GaleriPage() {
             <div className="lg:col-span-7 order-1 lg:order-2">
               <div className="relative rounded-3xl overflow-hidden bg-[#EEF5EF] border border-[#DCE6DD] group shadow-lg">
                 <img 
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5IWYe6xKLsrDbDKXGbLW2RBqs3RGWp2sKVrm4dfCZ1uswTVgBH_ePUIYgFo4qO9iMjiKATY0CHyqPRVSUD5c3x-exI3rpQZYNhblbEIw_lx304GlOFPrYAaDkBvIc-LdKT10GKKuMRtaLlLUbCGONTYyDm4rGQuR-JUD_GBqBncH0W2bcsAHWsXjFasbrP1njtqP2eKK_m1y_3R4B4HmV_qzT5O6wcv6SXgfIlJWBJKVB7_qWwaXH" 
+                  src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=800&q=80" 
                   alt="Handbag Leather Detailing" 
                   className="w-full h-[280px] sm:h-[380px] md:h-[480px] object-cover object-right transform duration-500 group-hover:scale-105"
                 />

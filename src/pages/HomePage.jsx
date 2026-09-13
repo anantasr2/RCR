@@ -6,17 +6,17 @@ import ReviewCarousel from '../components/ReviewCarousel';
 export default function HomePage() {
   const { onOpenConsultation } = useOutletContext();
 
-  const heroArtisanImg = "https://lh3.googleusercontent.com/aida/AEtjO1WydXmcEKZALEGmN5wOvyhloOIK6IKyXvjctfLApJOSRFFLskusYPJ61Y9-8frlCDRDkbYr_-dFTwHeSK53V2Ad8GmdxKn1eyM3ge7GPFA9YWg6pSBJxGdUMmDlzQ7qLFh8M17TjfGHqr2Gc4vOGbMVjEHBxUn_Xg7Roq_ppiW9KNnpYb4yoWeAzUm3QpDX7GmjpXRPuXSjUYDYLD6fYhaJvOX3OTBVyr5iSq7K0y4BH0fCzptsccFJDA4";
+  const heroArtisanImg = "https://images.unsplash.com/photo-1511556532299-8f662fc26c06?auto=format&fit=crop&w=1200&q=80";
   
   const reviewers = [
-    "https://lh3.googleusercontent.com/aida-public/AB6AXuAVYdg8xxXHv_qVunQ9Lu2qoZnLz9KYi-7j3iWE2ixCkjyVZFajzF7hZ0SVMIbeuk0nL-a5vwCAF2djjoQtI7xgCaNBKC7JtGUldScc7n4GE3FYme1VIYcgQTB74wMdB6yFXpwAIcuJXndq_BOArL_qbVZghBzNGNlUDp7D2Fz_NRurD-oRdVHb8SmtfA7LgfysgDUaP_lN3Kz47jG3Qs4KGkDLXQQjB1yehT8fB32MJnKpCoqtiane",
-    "https://lh3.googleusercontent.com/aida-public/AB6AXuBSEaYedG74zl8MKy3d4Q7FWMSpN6p0awRzeqJWCJ5Jw4qkKcblGHQiM3xLMfiwF6nSDmZgIukdPL-aQOykNM2xF7GOh7nfocw4hX6u5xcTvDFhyTdtmwLe_NWf51soWjBhGKIpX2ADljpUg8ldJFqbxoIqCB2rQ_opWJwSs-U-5QGD-jY24gKBa9m2GaOrXFeKva2wXWerMrznL1nUtuRYeAcB5xy8ZMDJ_335XcRvimmhmiPV0KV3",
-    "https://lh3.googleusercontent.com/aida-public/AB6AXuBBqso2V39DJne-vEfXF23vnlCYd6IScoLyzP-t622TQNNQY6Najh7Q68lUGPLG5rwJ3HS7K2f3UkjIX_7C0vxSvNmk_gknCP9hw2LOwvmL15aY7oryMvZisnBgMcfR0FCJ2I3cjC0r4izwBdVCDrVH4bUNSMhFeb4mDEVnMaivb_xkYFFjQdCL0aAnfpH3gHvG5cEiEmx3UKwSLvVse0-GZS3_WULv-63yp-GTOdSnud8idho-R_-i",
-    "https://lh3.googleusercontent.com/aida-public/AB6AXuDCdiMGJ-B8yBKl9a55TYTUvjazw_7-XjQuKrMh6iMLBsrSkqEg009DcwXOXmU7xqsGV6zs6nHPmbZ9GeuvgBzk7E59PRI0gkJFdkW8qDVnpFkB53eKTOhD-1CeqK1krA66q0QcGC-zgy3Utfs1lyEwK-NOeH4Btimm1G8IT1LG01Kr_YDJ7ELZxNh3Ryy9HYZszaLYXyeSbtN_I-M_mozlVwOcDJCsRaWwg2pSdMwMRvKdKlQ5fOxN"
+    "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&h=150&q=80",
+    "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&h=150&q=80",
+    "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=150&h=150&q=80",
+    "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&h=150&q=80"
   ];
 
-  const beforeSneaker = "https://lh3.googleusercontent.com/aida-public/AB6AXuDVDN3EVBqb45HUnRg38tPP_9VB5pdQts4IRaNo5lxQNyJ6I53Mkp-FlQsTGPuOlE1rot3dZpdb0c_SBMzDfCCtr-5ic70lZNWUumo93dtW9olOi_zUSA12kW32nVMz3i2o7xmbXGPKRMmU3pa174oc035cwbf2oYgudHOqt4O_Akz7dM7RIVthn1RccGxoFtybA4_mzjA-QYlyMG8phtVW3iCkMgOHnSoKJ4baqi2du987JrTdL6o8";
-  const afterSneaker = "https://lh3.googleusercontent.com/aida-public/AB6AXuDZjE1j0w0kmgC-LIXPNaNAsKzm7_ceCMsbPc48XptxKPhmmb-DABtZPyN-3nGf5R0y0z177BFBvZ8P4aTPv9PPbFYGiX-U-sKgQ-QfkyJOEINHmLEjvbCLcINZVYUeiLN0iT57huc7uAm19ovXCnQkAaaRC5oQGtfH68pobV65kE9pE-KM7P6u1C6wkTM19Y5SfYFWJDKKkyPf3SKksv5ke-p4rCXQWI26uuToFLDgqHkue8xfM_Od";
+  const beforeSneaker = "https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?auto=format&fit=crop&w=1000&q=80";
+  const afterSneaker = "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?auto=format&fit=crop&w=1000&q=80";
 
   return (
     <div className="flex flex-col w-full">
@@ -193,7 +193,7 @@ export default function HomePage() {
             >
               <div 
                 className="absolute inset-0 z-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
-                style={{ backgroundImage: `url('https://lh3.googleusercontent.com/aida-public/AB6AXuACErgcaP2GHEY3dG91flo_-sKUJ2Mx7xHg8dqDiMRRUQqFkDOJ7_1znbOFrFUjhVb7Q8cWo2hPNRWhsIufit5Q-0KYd-moxqxj2eCwwwL_k4Vudgh8Y0oDQjFJPvtddQeYrOgMxn01g41LdBSWoBzQ1-sRGoxMlSbGgpMUL1UnDEF_Yhh2jE_4ZwupO6Vu1ue3MiEVjfTTrneNIXdDvKU7DKypiJN7mM_rhdzmouTOzg0HFd905sG1')` }}
+                style={{ backgroundImage: `url('https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=800&q=80')` }}
               ></div>
               <div className="absolute inset-0 z-10 bg-gradient-to-t from-[#0B1A13]/95 via-[#0B1A13]/45 to-transparent"></div>
               <div className="relative z-20 space-y-1">
@@ -210,7 +210,7 @@ export default function HomePage() {
             >
               <div 
                 className="absolute inset-0 z-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
-                style={{ backgroundImage: `url('https://lh3.googleusercontent.com/aida-public/AB6AXuDS7hubO3fdEGEGUzvb9Z0djf7O6B1NkOh8i72JkHb4WLUICu9kLgATmuIcZ8dMBp-Lch4fpAejt6ZdDWIBZ0SQlpVCbKS-n61oUw-6F7Ts0c48m2NeS1wSET72eTSIFENjh5AVSbu_hRtijVFp82llgDJtZRCxMkWffTh0czhemAS0kxTq9oLlrH-slUvekHe2hGJMO1SPk6nU_sJc3ZINtedC0hjZ0SorjLfrMbAsbdvnlZ-B0vsW')` }}
+                style={{ backgroundImage: `url('https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=800&q=80')` }}
               ></div>
               <div className="absolute inset-0 z-10 bg-gradient-to-t from-[#0B1A13]/95 via-[#0B1A13]/45 to-transparent"></div>
               <div className="relative z-20 space-y-1">
@@ -227,7 +227,7 @@ export default function HomePage() {
             >
               <div 
                 className="absolute inset-0 z-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
-                style={{ backgroundImage: `url('https://lh3.googleusercontent.com/aida-public/AB6AXuDttzgycJc-0fe51SafNgzVWYJrOsxM-owVV8TQTkL2gzM7hlaDYnbW4y1MSJ-1A-wZJOQ4Ye9USiCTJd6DN3PoVl1_zByFLjrKUsrInkvhvv-Gi7e9iLHKkHx0hPQTsV80852-JvVI27mKCkPHVa3HOV2auJnoM5__PP842JztgqXj8xp_wnE3jnocREeMiTJgmv8MA8Uo67tD5RIZwGoQeuBc5bshvztRv8T_rXEXaTjQVRNcHWDb')` }}
+                style={{ backgroundImage: `url('https://images.unsplash.com/photo-1565026057447-bc90a3dceb87?auto=format&fit=crop&w=800&q=80')` }}
               ></div>
               <div className="absolute inset-0 z-10 bg-gradient-to-t from-[#0B1A13]/95 via-[#0B1A13]/45 to-transparent"></div>
               <div className="relative z-20 space-y-1">
@@ -244,7 +244,7 @@ export default function HomePage() {
             >
               <div 
                 className="absolute inset-0 z-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
-                style={{ backgroundImage: `url('https://lh3.googleusercontent.com/aida-public/AB6AXuCM7lyzZVT6y6tH3tb9zhZRNOMtrlS2A1EzxvE0mKODOmLpy-3O_7-EMErEdUHPqwkB5NBYqolAnOOnp8P5WqU8NOc-EYNkAq-m3f_qxLjGLn_reGIfkS-8BaOr7R-_JStdaOetXdp4TpN2v-wNyaDIto12wfEKkLrORy8jMCy1Hfp96SLkakxxlkzsnormW61os2GZMA8WbLisLBZduNNBZaAmLevdyOawoq5OB4lEY73zBpPFZpHk')` }}
+                style={{ backgroundImage: `url('https://images.unsplash.com/photo-1520639888713-7851133b1ed0?auto=format&fit=crop&w=800&q=80')` }}
               ></div>
               <div className="absolute inset-0 z-10 bg-gradient-to-t from-[#0B1A13]/95 via-[#0B1A13]/45 to-transparent"></div>
               <div className="relative z-20 space-y-1">
@@ -788,7 +788,7 @@ export default function HomePage() {
             <div className="lg:col-span-6 rounded-2xl overflow-hidden relative shadow-md min-h-[380px] bg-white border border-[#E2E8E4] flex flex-col justify-between p-4">
               <div 
                 className="absolute inset-0 w-full h-full bg-cover bg-center" 
-                style={{ backgroundImage: `url('https://lh3.googleusercontent.com/aida-public/AB6AXuBuSl08BMxU8MAgTujaSLXQiGTddRtY3ZMtZXkLiQaOz_zsnK-Qz_xJnRtdY8nft2YcbIl6Fj1NWvw82povBYmHA6wz1IeKXQuqJt0Js9d63wpuS7uWW_Z0dOXlj4kL5VlLzqf751cp99JcrOWm706JaNHJkuVb0VtMcRRPMo4BbIt4wcjYVS28jWAwDZ0lEOk7BgzutHsKMzcGKbP7E5mGyimqnWrf2iBHZrohGy0XnyTXZcfG2hY3')` }}
+                style={{ backgroundImage: `url('https://images.unsplash.com/photo-1530541930197-ff16ac917b0e?auto=format&fit=crop&w=1400&q=80')` }}
               ></div>
               <div className="absolute inset-0 bg-[#0B1A13]/25 pointer-events-none"></div>
 

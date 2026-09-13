@@ -14,7 +14,7 @@ export default function LayananPage() {
     { id: 'packages', label: '✨ 05. Paket Bundling' },
   ];
 
-  const vibramHeroImg = "https://lh3.googleusercontent.com/aida-public/AB6AXuBQczYes299CaO6-5rUkAAIjotALbKx9MgCWwhXLUQD0jyS7WZaYI4bpdai2iNut40MUZL8bblPjp9QnidoWoCPd2pO1GSoM9aSpF2pOHF39R7nYIIr6q6HMpD0_tf10MopkDCfe3VgvWP6cyT518GKHr5uHxLnCH7XgVd9NlIDx0BzG0rc_3lntMkhTiGlmSpmknGQnziW8A1BlObIlMStRo18JtaN345c4sWeDnSv1fO1VQCsN3S8CGEe-ByB8GGr1A";
+  const vibramHeroImg = "https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=1200&q=80";
 
   return (
     <div className="w-full bg-[#F8FAF9]">

@@ -10,7 +10,7 @@ export default function Navbar({ onOpenBookModal, onOpenTrackModal }) {
     return location.pathname.startsWith(path);
   };
 
-  const logoUrl = "https://lh3.googleusercontent.com/aida-public/AB6AXuDu1DzQUQic8wey-vX7aVsg3YlNtMRMyKqMewIxuhSZkYaSfqloJIMG4s8myryagg1syHEEDDtNyoKJQ5Fx4nPoxd_0e4gCNFrOHSuo-QZzNQ9_pJY5OdLK-g33OM4fXH9KmSxnlF7EjXw_0A2h7iXZs3e3y9CjtoxsrhPgc6Umct2KyIhjIfw60ZUnMncBRNlsp-FEDC_QylTC84E6Id2lDo645ib0ThYE_hLvKKVh3__nIhm4bYe12thzSwvV1YQ5zA";
+  const logoUrl = "/logo.png";
 
   return (
     <header className="fixed top-0 w-full z-40 transition-all duration-300">

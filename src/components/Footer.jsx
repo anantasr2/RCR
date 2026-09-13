@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 export default function Footer() {
-  const logoUrl = "https://lh3.googleusercontent.com/aida-public/AB6AXuCba1iOIKMhN_aZrqZk1Kd6yaI3W9vROZ9g6Zghr-4ZaHUS3Rb6PbQNfc0QFGX936pn2b5L7Ik1uR8DB-zeU4pWmw7vevkyE8g7I79-BhblqWaSkwMVMdS7Pj1dcjFiiYGD6PHaeRECHWxqiwBa2KmKS7CR5R9PQFVbibcxgxF1lurI0NCFzTF6rvhFdR0IEQLQLwMoalMRutnLh-uFeYt02zklHHgH8u8oScKN6_hXVlGWpByzRrM5efmnAAf9XguhCw";
+  const logoUrl = "/logo.png";
 
   return (
     <footer className="w-full bg-[#07140E] text-[#D0E2D6] py-16 border-t border-[#142E20]">
