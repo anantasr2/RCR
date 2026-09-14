@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 export default function Footer() {
-  const logoUrl = "/logo.png";
+  const logoUrl = "/logo - fixed.png";
 
   return (
     <footer className="w-full bg-[#07140E] text-[#D0E2D6] py-16 border-t border-[#142E20]">
@@ -21,7 +21,7 @@ export default function Footer() {
               </div>
               <div className="flex flex-col text-left">
                 <span className="font-headline text-2xl uppercase text-white font-bold tracking-wider leading-none">
-                  RCR INDONESIA
+                  Revive
                 </span>
                 <span className="font-label text-[10px] text-[#73D49B] uppercase tracking-widest font-bold mt-1">
                   REPAIR • CLEANING • RESTORE
@@ -106,7 +106,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
           <span className="font-label text-xs text-[#A7C2B2]/60">
-            © {new Date().getFullYear()} RCR Indonesia. Repair, Cleaning &amp; Restore. All rights reserved.
+            © {new Date().getFullYear()} Revive. Repair, Cleaning &amp; Restore. All rights reserved.
           </span>
           <span className="font-label text-xs text-[#73D49B] uppercase font-semibold tracking-wide">
             Museum-Grade Restoration System

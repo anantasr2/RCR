@@ -142,7 +142,7 @@ export default function GaleriPage() {
             <div>
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#EEF5EF] border border-[#DCE6DD] text-[10px] sm:text-[11px] font-bold tracking-[0.2em] text-[#143826] uppercase mb-4">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#C2101C]"></span>
-                RCR Restorations · Showcase 2026
+                Revive Restorations · Showcase 2026
               </div>
               <h1 className="text-3xl sm:text-5xl lg:text-7xl font-extrabold tracking-tight text-[#143826] uppercase leading-[1.05] font-headline">
                 Real Work.<br />
@@ -151,7 +151,7 @@ export default function GaleriPage() {
             </div>
             <div className="max-w-md md:text-right">
               <p className="text-xs sm:text-sm md:text-base text-[#465A50] leading-relaxed mb-4 font-body">
-                Lihat bagaimana tangan terampil master artisan RCR mengembalikan martabat, ketahanan sol, dan keindahan patina barang kesayangan Anda.
+                Lihat bagaimana tangan terampil master artisan Revive mengembalikan martabat, ketahanan sol, dan keindahan patina barang kesayangan Anda.
               </p>
               <a 
                 href="#before-after" 
@@ -235,7 +235,7 @@ export default function GaleriPage() {
               See The Difference.
             </h2>
             <p className="text-xs sm:text-sm md:text-base text-[#55695E] mt-3 font-body">
-              Geser tuas pembanding interaktif di bawah untuk melihat mikroskopis hasil deep cleaning &amp; unyellowing sol oleh artisan RCR.
+              Geser tuas pembanding interaktif di bawah untuk melihat mikroskopis hasil deep cleaning &amp; unyellowing sol oleh artisan Revive.
             </p>
           </div>
 
@@ -792,7 +792,7 @@ export default function GaleriPage() {
           </h2>
 
           <p className="text-xs sm:text-sm md:text-base text-[#465A50] mt-4 sm:mt-6 max-w-xl mx-auto leading-relaxed font-body">
-            Kirimkan foto barang Anda sekarang untuk diagnosa kondisi awal dan estimasi biaya gratis tanpa komitmen oleh artisan RCR Indonesia.
+            Kirimkan foto barang Anda sekarang untuk diagnosa kondisi awal dan estimasi biaya gratis tanpa komitmen oleh artisan Revive Indonesia.
           </p>
 
           <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">

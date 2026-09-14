@@ -23,12 +23,12 @@ export default function LayananPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div className="space-y-2.5 max-w-3xl">
             <div className="flex items-center gap-2 text-[11px] sm:text-xs font-label uppercase text-[#2E5C43] tracking-widest font-bold">
-              <span>RCR Atelier Tariffs 2026</span>
+              <span>Revive Atelier Tariffs 2026</span>
               <span>•</span>
               <span>Authentic Italian Vibram &amp; French Saphir Protocols</span>
             </div>
             <h1 className="font-headline text-3xl sm:text-4xl lg:text-5xl font-bold text-[#143826] tracking-tight uppercase leading-tight">
-              Katalog Layanan &amp; Restorasi RCR
+              Katalog Layanan &amp; Restorasi Revive
             </h1>
             <p className="text-xs sm:text-sm md:text-base text-[#4F6056] font-body leading-relaxed">
               Formulasi pH-seimbang, rekondisi sol jahitan tangan Goodyear/Blake, pembersihan mikroskopis suede &amp; kulit mewah tanpa senyawa kimia korosif.

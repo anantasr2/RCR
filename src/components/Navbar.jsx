@@ -10,7 +10,7 @@ export default function Navbar({ onOpenBookModal, onOpenTrackModal }) {
     return location.pathname.startsWith(path);
   };
 
-  const logoUrl = "/logo.png";
+  const logoUrl = "/logo - fixed.png";
 
   return (
     <header className="fixed top-0 w-full z-40 transition-all duration-300">
@@ -28,7 +28,7 @@ export default function Navbar({ onOpenBookModal, onOpenTrackModal }) {
             </div>
             <div className="flex flex-col text-left">
               <span className="font-headline text-xl sm:text-2xl tracking-wider uppercase font-bold text-[#143826] leading-none transition-colors">
-                RCR INDONESIA
+                Revive
               </span>
               <span className="font-label text-[9px] sm:text-[10px] text-[#526B5C] tracking-widest font-bold uppercase mt-1">
                 REPAIR • CLEANING • RESTORE

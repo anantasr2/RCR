@@ -463,7 +463,7 @@ export default function HomePage() {
               <div className="p-4 rounded-xl bg-[#F4F8F5] border border-[#D8E5DC] flex items-start gap-3 shadow-sm">
                 <span className="material-symbols-outlined text-[#C2101C] text-2xl mt-0.5">bolt</span>
                 <p className="font-body text-xs text-[#143826] leading-relaxed font-medium">
-                  Prioritas pengerjaan hari yang sama &amp; penanganan ekspres atelier. Detail benefit mengikuti kapasitas harian dan regulasi resmi RCR Indonesia.
+                  Prioritas pengerjaan hari yang sama &amp; penanganan ekspres atelier. Detail benefit mengikuti kapasitas harian dan regulasi resmi Revive Indonesia.
                 </p>
               </div>
               <div className="flex flex-wrap items-center gap-4 pt-2">
@@ -535,7 +535,7 @@ export default function HomePage() {
                 OUTLET NETWORK
               </span>
               <h2 className="font-headline text-3xl sm:text-4xl uppercase text-[#143826] font-bold tracking-tight">
-                FIND YOUR NEAREST RCR.
+                FIND YOUR NEAREST Revive.
               </h2>
               <p className="text-[#3D5245] font-body text-sm mt-1">
                 Ready to send your item? Choose the location that works best for you in Semarang.
@@ -798,7 +798,7 @@ export default function HomePage() {
                   <span className="material-symbols-outlined text-lg">store</span>
                 </div>
                 <span className="font-headline text-base text-[#143826] font-bold uppercase block">
-                  RCR HQ HASANUDIN SEMARANG
+                  Revive HASANUDIN SEMARANG
                 </span>
                 <span className="font-body text-xs text-[#526B5C] block">
                   Jl. Hasanudin 48 • Workshop Utama &amp; Sol Bar

@@ -12,7 +12,7 @@ export default function ConsultationModal({ isOpen, onClose, initialItem = null 
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const text = `Halo Artisan RCR Indonesia,\n\nSaya ingin konsultasi treatment:\n• Kategori: ${formData.itemType}\n• Layanan: ${formData.treatment}\n• Lokasi Drop: ${formData.branch}\n• Catatan Kondisi: ${formData.notes || 'Normal treatment'}\n\nMohon info estimasi pengerjaan dan slot atelier. Terima kasih!`;
+    const text = `Halo Artisan Revive Indonesia,\n\nSaya ingin konsultasi treatment:\n• Kategori: ${formData.itemType}\n• Layanan: ${formData.treatment}\n• Lokasi Drop: ${formData.branch}\n• Catatan Kondisi: ${formData.notes || 'Normal treatment'}\n\nMohon info estimasi pengerjaan dan slot atelier. Terima kasih!`;
     
     const waUrl = `https://wa.me/6281234567890?text=${encodeURIComponent(text)}`;
     window.open(waUrl, '_blank');
@@ -38,7 +38,7 @@ export default function ConsultationModal({ isOpen, onClose, initialItem = null 
               BOOK TREATMENT
             </h3>
             <p className="font-body text-xs text-[#526B5C]">
-              Konsultasi langsung dengan Master Artisan RCR Indonesia
+              Konsultasi langsung dengan Master Artisan Revive Indonesia
             </p>
           </div>
         </div>
